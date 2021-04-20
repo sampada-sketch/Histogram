@@ -1,0 +1,11 @@
+mean(x>70)
+sd(x)
+1-pnorm(70,mean(x),sd(x))
+ps<-seq(0.01,0.99,0.01)
+qs<-quantile(x,ps)
+qs
+normalqs<-qnorm(ps,mean(x),sd(x))
+plot(normalqs,xlab="normal Percentile",ylab="Height percentile")
+abline(0,1)
+qqnorm(x)
+qqline(x)
